@@ -4,20 +4,6 @@ const stars=[];
 const STAR_COUNT=300; //total stars//
 const mouse = { x: null, y:null};
 
-const allWindows = document.querySelectorAll('#skyline .building-wrap div');
-
-setInterval(() => {
-  allWindows.forEach(win => {
-    if(Math.random() > 0.5) win.style.background = "#f5d76e";
-    else win.style.background = "#333";
-  });
-}, 500);
-
-window.addEventListener("mousemove", e => {
-    mouse.x=e.clientX;
-    mouse.y=e.clientY;
-});
-
 function resizeCanvas() { //resize canvas to window size
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
