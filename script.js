@@ -7,6 +7,10 @@ function showView(viewId) {
     
     document.getElementById(viewId).classList.add('active');
 
+    //Give active class to nav-links//
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('nav-active'));
+    document.getElementById(`${viewId}-btn`).classList.add('nav-active');
+
     //get navbar menu to close when you click a link//
     const menu = document.getElementById('navbarNav');
     const bsCollapse = bootstrap.Collapse.getInstance(menu);
