@@ -11,7 +11,7 @@
     --text-sm: clamp(0.95rem, 2vw, 1.2rem);
     --text-base: clamp(1.1rem, 2.5vw, 1.5rem);
     --text-lg: clamp(1.3rem, 3vw, 2rem);
-    --text-xl: clamp(1.5rem, 4vw, 2.5rem);
+    --text-xl: clamp(1.5rem, 3.8vw, 2.2rem);
     --text-hero: clamp(1.8rem, 5vw, 3rem);
 }
 
@@ -60,8 +60,12 @@ h3 {
 font-size: var(--text-lg);
 }
 
-p, li {
+p, .list-group-item {
 font-size: var(--text-base);
+}
+
+.nav-link {
+    font-size: var(--text-sm);
 }
 
 /* HEADER AND NAV */
@@ -88,8 +92,8 @@ color: var(--text-light) !important;
 
 .navbar {
     backdrop-filter: blur(3px);
-    border-bottom: 1px solid var(--light-border);
-    box-shadow: 1px 8px 15px var(--light-border);
+    border-bottom: 1px solid var(--dark-translucent);
+    box-shadow: 0px 0px 20px var(--dark-translucent);
     -webkit-backdrop-filter: blur(3px);
     transition: all .3s ease-in-out;
 }
@@ -101,7 +105,7 @@ color: var(--text-light) !important;
     background-color: none;
     backdrop-filter: blur(3px);
     font-size: var(--text-sm);
-    box-shadow: 0 0 15px var(--accent-translucent);
+    box-shadow: 0 0 10px var(--accent-translucent);
 }
 
 .btn:hover {
@@ -129,8 +133,14 @@ color: var(--text-light) !important;
 .skills-card {
     background-color: var(--text-dark);
     border-radius: 20px;
-    box-shadow: 0 0 15px var(--accent-translucent);
+    box-shadow: 0 0 20px var(--accent-translucent);
     color: var(--text-light);
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
 }
 
 .list-group {
@@ -158,6 +168,27 @@ color: var(--text-light) !important;
 /* FORM */
 .css-form {
     display:none;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px var(--accent-translucent);
+    border: 1px solid var(--accent-blue);
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    background-color: var(--dark-translucent);
+    box-shadow: 0 0 10px var(--accent-translucent);
+    border: 1px solid var(--accent-blue);
+    border-radius: 4px;
+    color: var(--text-light);
+    outline: none;
 }
 
 /* MEDIA QUERY */
