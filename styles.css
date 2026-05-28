@@ -15,6 +15,20 @@
     --text-hero: clamp(1.8rem, 5vw, 3rem);
 }
 
+.electrolize-regular {
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* INTERACTIVE BACKGROUND */
 #vanta-bg {
     position: fixed;
@@ -29,6 +43,7 @@
 body {
 background-color: transparent;
 color: var(--text-light);
+font-family: roboto mono;
 }
 
 .view {
@@ -140,7 +155,7 @@ color: var(--text-light) !important;
 .profile-img {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 400px;
 }
 
 .list-group {
@@ -165,6 +180,16 @@ color: var(--text-light) !important;
     border-radius: 10px;
 }
 
+.video-div {
+    border: 1px solid var(--accent-blue);
+    border-radius: 5px;
+    background-color: var(--dark-translucent);
+    box-shadow: 0 0 20px var(--accent-translucent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* FORM */
 .css-form {
     display:none;
@@ -178,6 +203,7 @@ textarea {
     border: 1px solid var(--accent-blue);
     border-radius: 4px;
     width: 100%;
+    color: var(--text-light);
 }
 
 input[type=text]:focus,
@@ -195,5 +221,9 @@ textarea:focus {
 @media (max-width: 991px) {
     .navbar {
         backdrop-filter: blur(15px);
+    }
+
+    .video-div {
+        height: 200px;
     }
 }
