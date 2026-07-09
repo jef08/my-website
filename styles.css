@@ -208,6 +208,13 @@ color: var(--text-light) !important;
     justify-content: center;
 }
 
+.video-iframe {
+    border: 1px solid var(--accent-blue);
+    border-radius: 5px;
+    box-shadow: 0 0 20px var(--accent-translucent);
+    overflow: hidden;
+}
+
 /* FORM */
 .css-form {
     display:none;
@@ -256,6 +263,7 @@ input:-webkit-autofill:active {
     }
 
     .video-div {
-        height: 200px;
+        height: auto;
+        margin-top: 1rem;
     }
 }
